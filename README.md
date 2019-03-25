@@ -2,9 +2,9 @@
 
 iOS Audio player :speaker: uses *AVQueuePlayer* 
 
-![AQPlayer](https://github.com/AhmadAmri/AQPlayer/screenshots/screenshot_1.png)
-![command center skip mode](https://github.com/AhmadAmri/AQPlayer/screenshots/screenshot_2.png)
-![command center next previous mode](https://github.com/AhmadAmri/AQPlayer/screenshots/screenshot_3.png)
+![AQPlayer](https://raw.githubusercontent.com/AhmadAmri/AQPlayer/master/screenshots/screenshot_1.png)
+![command center skip mode](https://raw.githubusercontent.com/AhmadAmri/AQPlayer/master/screenshots/screenshot_2.png)
+![command center next previous mode](https://raw.githubusercontent.com/AhmadAmri/AQPlayer/master/screenshots/screenshot_3.png)
 
 - play background audio and handle **MPRemoteCommandCenter** actions.
 - next track, previous track, go to specific track, skip interval (forward/backward), change playback rate, ...
