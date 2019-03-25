@@ -1,0 +1,6 @@
+framework module Pods_AQPlayer_Tests {
+  umbrella header "Pods-AQPlayer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

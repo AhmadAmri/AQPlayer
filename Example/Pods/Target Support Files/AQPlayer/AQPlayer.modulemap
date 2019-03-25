@@ -1,0 +1,6 @@
+framework module AQPlayer {
+  umbrella header "AQPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

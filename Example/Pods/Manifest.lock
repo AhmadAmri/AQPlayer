@@ -1,0 +1,16 @@
+PODS:
+  - AQPlayer (0.1.0)
+
+DEPENDENCIES:
+  - AQPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  AQPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AQPlayer: 20b3950cf46e34e3766b9b37e7d184f1f70e43ae
+
+PODFILE CHECKSUM: 81089c0c75c8a1266e1b0e1687dad5e6d9d95d03
+
+COCOAPODS: 1.6.0.beta.1

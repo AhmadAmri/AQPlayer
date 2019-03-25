@@ -1,0 +1,22 @@
+{
+  "name": "AQPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of AQPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ahmadamri/AQPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ahmadamri": "asamri@hhoffice.ae"
+  },
+  "source": {
+    "git": "https://github.com/ahmadamri/AQPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AQPlayer/Classes/**/*"
+}

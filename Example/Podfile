@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AQPlayer_Example' do
+  pod 'AQPlayer', :path => '../'
+
+  target 'AQPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
