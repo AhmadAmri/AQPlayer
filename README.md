@@ -36,6 +36,15 @@ playerManager.setup(with: playeritems, startFrom: 0, playAfterSetup: false)
 
 **Command Center Art work image can be set during initilization of the item using (URL or UIImage), or through the delegate method _getCoverImage_**
 
+##Insatll
+### CocoaPods
+
+To install using [CocoaPods][https://cocoapods.org/pods/AQPlayer], add the following to your Podfile:
+
+```
+pod 'AQPlayer'
+```
+
 
 ## Example
 **Check the Example in the project for full fuctioning demo**
