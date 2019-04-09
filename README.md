@@ -39,7 +39,7 @@ playerManager.setup(with: playeritems, startFrom: 0, playAfterSetup: false)
 ##Insatll
 ### CocoaPods
 
-To install using [CocoaPods][https://cocoapods.org/pods/AQPlayer], add the following to your Podfile:
+To install using [CocoaPods](https://cocoapods.org/pods/AQPlayer), add the following to your Podfile:
 
 ```
 pod 'AQPlayer'
