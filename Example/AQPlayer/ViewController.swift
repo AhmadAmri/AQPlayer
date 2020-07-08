@@ -104,7 +104,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setup chaptes list
+        // setup chapters list
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsMultipleSelection = false
@@ -125,11 +125,11 @@ class ViewController: UIViewController {
         self.fwButton.setTitle("\(Int(interval))", for: .normal)
         self.bwButton.setTitle("\(Int(interval))", for: .normal)
         
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(changeRemoteCotrolMode))
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(changeRemoteControlMode))
         albumImage.addGestureRecognizer(imageTap)
     }
     
-    @objc func changeRemoteCotrolMode() {
+    @objc func changeRemoteControlMode() {
         self.remoteControlMode = self.remoteControlMode == .skip ? .nextprev : .skip
         playerManager.setCommandCenterMode(mode: self.remoteControlMode)
     }
@@ -286,7 +286,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Cahpter \(indexPath.row + 1): \(self.parts[indexPath.row][0])"
+        cell.textLabel?.text = "Chapter \(indexPath.row + 1): \(self.parts[indexPath.row][0])"
         return cell
     }
     
