@@ -12,7 +12,7 @@ import AQPlayer
 class ViewController: UIViewController {
     
     @IBOutlet var albumImage: UIImageView!
-    @IBOutlet var playPuseButton: UIButton!
+    @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var fwButton: UIButton!
     @IBOutlet var bwButton: UIButton!
     
@@ -188,19 +188,19 @@ class ViewController: UIViewController {
     
     // MARK: helpers
     fileprivate func setPlayPauseButtonImage(_ status: AQPlayerStatus) {
-        self.playPuseButton.layer.removeAllAnimations()
+        self.playPauseButton.layer.removeAllAnimations()
         switch status {
         case .loading, .none:
-            self.playPuseButton.setBackgroundImage(UIImage(named: "loading"), for: .normal)
-            self.rotateView(self.playPuseButton)
+            self.playPauseButton.setBackgroundImage(UIImage(named: "loading"), for: .normal)
+            self.rotateView(self.playPauseButton)
         case .readyToPlay, .paused:
-            self.playPuseButton.setBackgroundImage(UIImage(named: "play"), for: .normal)
+            self.playPauseButton.setBackgroundImage(UIImage(named: "play"), for: .normal)
             
         case .playing:
-            self.playPuseButton.setBackgroundImage(UIImage(named: "pause"), for: .normal)
+            self.playPauseButton.setBackgroundImage(UIImage(named: "pause"), for: .normal)
             
         case .failed:
-            self.playPuseButton.setBackgroundImage(UIImage(named: "error"), for: .normal)
+            self.playPauseButton.setBackgroundImage(UIImage(named: "error"), for: .normal)
         }
     }
     private func animateButton(_ sender: Any) {
