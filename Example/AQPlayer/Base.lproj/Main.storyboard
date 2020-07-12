@@ -232,7 +232,7 @@
                         <outlet property="listTitleLabel" destination="VnJ-cH-OcN" id="B3O-so-AJf"/>
                         <outlet property="nextButton" destination="Pd7-Iu-Jxd" id="0ly-5W-FdV"/>
                         <outlet property="partLabel" destination="pZP-29-gjz" id="WGc-rg-OHV"/>
-                        <outlet property="playPuseButton" destination="92z-wK-TWm" id="rOO-Qz-QYf"/>
+                        <outlet property="playPauseButton" destination="92z-wK-TWm" id="rOO-Qz-QYf"/>
                         <outlet property="playRateButton" destination="93l-oe-lhT" id="TRc-p8-isW"/>
                         <outlet property="prevButton" destination="GQ9-Xh-pLP" id="udf-Hj-93m"/>
                         <outlet property="progressSlider" destination="CMM-dW-JO7" id="2MK-7v-8jw"/>
