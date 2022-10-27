@@ -14,12 +14,12 @@
 		6469B46FDC14F2A04B4B583843199189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		76EB2FBACBF4379AE779FB1F20038420 /* Pods-AQPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 376DC7F3416FFE4E723499D34E8CFB5F /* Pods-AQPlayer_Example-dummy.m */; };
 		968F453472FFCC09E626110AE9F58CED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		C19C3878290AE90200B495B2 /* AAPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3872290AE90200B495B2 /* AAPlayerItem.swift */; };
-		C19C3879290AE90200B495B2 /* AAPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3873290AE90200B495B2 /* AAPlayerManager.swift */; };
-		C19C387A290AE90200B495B2 /* AAPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3874290AE90200B495B2 /* AAPlayerDelegate.swift */; };
-		C19C387B290AE90200B495B2 /* AAQueuePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3875290AE90200B495B2 /* AAQueuePlayer.swift */; };
-		C19C387C290AE90200B495B2 /* AAPlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3876290AE90200B495B2 /* AAPlayerStatus.swift */; };
-		C19C387D290AE90200B495B2 /* AAPlayerItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3877290AE90200B495B2 /* AAPlayerItemInfo.swift */; };
+		C19C3878290AE90200B495B2 /* AQPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3872290AE90200B495B2 /* AQPlayerItem.swift */; };
+		C19C3879290AE90200B495B2 /* AQPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3873290AE90200B495B2 /* AQPlayerManager.swift */; };
+		C19C387A290AE90200B495B2 /* AQPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */; };
+		C19C387B290AE90200B495B2 /* AQQueuePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */; };
+		C19C387C290AE90200B495B2 /* AQPlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */; };
+		C19C387D290AE90200B495B2 /* AQPlayerItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */; };
 		C19C387F290AEC7C00B495B2 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C387E290AEC7C00B495B2 /* Defaults.swift */; };
 		E4AF96C5ECFBC3A82DC4B10F7137FB5E /* Pods-AQPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1427AE1048968D2C7C3AAADD592E1 /* Pods-AQPlayer_Tests-dummy.m */; };
 		F6D99AED4A0BB5AB151DBDE17299DAFE /* AQPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D15FC8366033D5C22BC3D98294A59311 /* AQPlayer-dummy.m */; };
@@ -66,12 +66,12 @@
 		AC045BEAE04B43FE6BB33BECA7C837B8 /* AQPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AQPlayer-Info.plist"; sourceTree = "<group>"; };
 		B2D6B05E8C9AB77681A48C3DAEA29E97 /* AQPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AQPlayer.modulemap; sourceTree = "<group>"; };
 		BD22F5C5A8275C7D1A2C028CD194C9E7 /* Pods-AQPlayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AQPlayer_Example-Info.plist"; sourceTree = "<group>"; };
-		C19C3872290AE90200B495B2 /* AAPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerItem.swift; path = AQPlayer/Classes/AAPlayerItem.swift; sourceTree = "<group>"; };
-		C19C3873290AE90200B495B2 /* AAPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerManager.swift; path = AQPlayer/Classes/AAPlayerManager.swift; sourceTree = "<group>"; };
-		C19C3874290AE90200B495B2 /* AAPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerDelegate.swift; path = AQPlayer/Classes/AAPlayerDelegate.swift; sourceTree = "<group>"; };
-		C19C3875290AE90200B495B2 /* AAQueuePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAQueuePlayer.swift; path = AQPlayer/Classes/AAQueuePlayer.swift; sourceTree = "<group>"; };
-		C19C3876290AE90200B495B2 /* AAPlayerStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerStatus.swift; path = AQPlayer/Classes/AAPlayerStatus.swift; sourceTree = "<group>"; };
-		C19C3877290AE90200B495B2 /* AAPlayerItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerItemInfo.swift; path = AQPlayer/Classes/AAPlayerItemInfo.swift; sourceTree = "<group>"; };
+		C19C3872290AE90200B495B2 /* AQPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerItem.swift; path = AQPlayer/Classes/AQPlayerItem.swift; sourceTree = "<group>"; };
+		C19C3873290AE90200B495B2 /* AQPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerManager.swift; path = AQPlayer/Classes/AQPlayerManager.swift; sourceTree = "<group>"; };
+		C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerDelegate.swift; path = AQPlayer/Classes/AQPlayerDelegate.swift; sourceTree = "<group>"; };
+		C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQQueuePlayer.swift; path = AQPlayer/Classes/AQQueuePlayer.swift; sourceTree = "<group>"; };
+		C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerStatus.swift; path = AQPlayer/Classes/AQPlayerStatus.swift; sourceTree = "<group>"; };
+		C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerItemInfo.swift; path = AQPlayer/Classes/AQPlayerItemInfo.swift; sourceTree = "<group>"; };
 		C19C387E290AEC7C00B495B2 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = AQPlayer/Classes/Defaults.swift; sourceTree = "<group>"; };
 		C7E8A880DFA50C8ACA5807AE8443BF82 /* Pods-AQPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AQPlayer_Example.modulemap"; sourceTree = "<group>"; };
 		D15FC8366033D5C22BC3D98294A59311 /* AQPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AQPlayer-dummy.m"; sourceTree = "<group>"; };
@@ -210,12 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				C19C387E290AEC7C00B495B2 /* Defaults.swift */,
-				C19C3874290AE90200B495B2 /* AAPlayerDelegate.swift */,
-				C19C3872290AE90200B495B2 /* AAPlayerItem.swift */,
-				C19C3877290AE90200B495B2 /* AAPlayerItemInfo.swift */,
-				C19C3873290AE90200B495B2 /* AAPlayerManager.swift */,
-				C19C3876290AE90200B495B2 /* AAPlayerStatus.swift */,
-				C19C3875290AE90200B495B2 /* AAQueuePlayer.swift */,
+				C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */,
+				C19C3872290AE90200B495B2 /* AQPlayerItem.swift */,
+				C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */,
+				C19C3873290AE90200B495B2 /* AQPlayerManager.swift */,
+				C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */,
+				C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */,
 				49CCB461AD9E0ED1831628EFCB651321 /* Pod */,
 				9343F55C51D1CF7AC4BAEA2AB732079A /* Support Files */,
 			);
@@ -396,14 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19C387D290AE90200B495B2 /* AAPlayerItemInfo.swift in Sources */,
+				C19C387D290AE90200B495B2 /* AQPlayerItemInfo.swift in Sources */,
 				C19C387F290AEC7C00B495B2 /* Defaults.swift in Sources */,
 				F6D99AED4A0BB5AB151DBDE17299DAFE /* AQPlayer-dummy.m in Sources */,
-				C19C3879290AE90200B495B2 /* AAPlayerManager.swift in Sources */,
-				C19C387C290AE90200B495B2 /* AAPlayerStatus.swift in Sources */,
-				C19C3878290AE90200B495B2 /* AAPlayerItem.swift in Sources */,
-				C19C387B290AE90200B495B2 /* AAQueuePlayer.swift in Sources */,
-				C19C387A290AE90200B495B2 /* AAPlayerDelegate.swift in Sources */,
+				C19C3879290AE90200B495B2 /* AQPlayerManager.swift in Sources */,
+				C19C387C290AE90200B495B2 /* AQPlayerStatus.swift in Sources */,
+				C19C3878290AE90200B495B2 /* AQPlayerItem.swift in Sources */,
+				C19C387B290AE90200B495B2 /* AQQueuePlayer.swift in Sources */,
+				C19C387A290AE90200B495B2 /* AQPlayerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
