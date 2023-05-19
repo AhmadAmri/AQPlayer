@@ -14,13 +14,14 @@
 		6469B46FDC14F2A04B4B583843199189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		76EB2FBACBF4379AE779FB1F20038420 /* Pods-AQPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 376DC7F3416FFE4E723499D34E8CFB5F /* Pods-AQPlayer_Example-dummy.m */; };
 		968F453472FFCC09E626110AE9F58CED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		C19C3878290AE90200B495B2 /* AQPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3872290AE90200B495B2 /* AQPlayerItem.swift */; };
+		C19C3879290AE90200B495B2 /* AQPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3873290AE90200B495B2 /* AQPlayerManager.swift */; };
+		C19C387A290AE90200B495B2 /* AQPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */; };
+		C19C387B290AE90200B495B2 /* AQQueuePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */; };
+		C19C387C290AE90200B495B2 /* AQPlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */; };
+		C19C387D290AE90200B495B2 /* AQPlayerItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */; };
+		C19C387F290AEC7C00B495B2 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19C387E290AEC7C00B495B2 /* Defaults.swift */; };
 		E4AF96C5ECFBC3A82DC4B10F7137FB5E /* Pods-AQPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1427AE1048968D2C7C3AAADD592E1 /* Pods-AQPlayer_Tests-dummy.m */; };
-		F1119E99224792A700E2FAD6 /* AAQueuePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E93224792A700E2FAD6 /* AAQueuePlayer.swift */; };
-		F1119E9A224792A700E2FAD6 /* AAPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E94224792A700E2FAD6 /* AAPlayerDelegate.swift */; };
-		F1119E9B224792A700E2FAD6 /* AAPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E95224792A700E2FAD6 /* AAPlayerItem.swift */; };
-		F1119E9C224792A700E2FAD6 /* AAPlayerItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E96224792A700E2FAD6 /* AAPlayerItemInfo.swift */; };
-		F1119E9D224792A700E2FAD6 /* AAPlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E97224792A700E2FAD6 /* AAPlayerStatus.swift */; };
-		F1119E9E224792A700E2FAD6 /* AAPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1119E98224792A700E2FAD6 /* AAPlayerManager.swift */; };
 		F6D99AED4A0BB5AB151DBDE17299DAFE /* AQPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D15FC8366033D5C22BC3D98294A59311 /* AQPlayer-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -65,17 +66,18 @@
 		AC045BEAE04B43FE6BB33BECA7C837B8 /* AQPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AQPlayer-Info.plist"; sourceTree = "<group>"; };
 		B2D6B05E8C9AB77681A48C3DAEA29E97 /* AQPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AQPlayer.modulemap; sourceTree = "<group>"; };
 		BD22F5C5A8275C7D1A2C028CD194C9E7 /* Pods-AQPlayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AQPlayer_Example-Info.plist"; sourceTree = "<group>"; };
+		C19C3872290AE90200B495B2 /* AQPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerItem.swift; path = AQPlayer/Classes/AQPlayerItem.swift; sourceTree = "<group>"; };
+		C19C3873290AE90200B495B2 /* AQPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerManager.swift; path = AQPlayer/Classes/AQPlayerManager.swift; sourceTree = "<group>"; };
+		C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerDelegate.swift; path = AQPlayer/Classes/AQPlayerDelegate.swift; sourceTree = "<group>"; };
+		C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQQueuePlayer.swift; path = AQPlayer/Classes/AQQueuePlayer.swift; sourceTree = "<group>"; };
+		C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerStatus.swift; path = AQPlayer/Classes/AQPlayerStatus.swift; sourceTree = "<group>"; };
+		C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQPlayerItemInfo.swift; path = AQPlayer/Classes/AQPlayerItemInfo.swift; sourceTree = "<group>"; };
+		C19C387E290AEC7C00B495B2 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = AQPlayer/Classes/Defaults.swift; sourceTree = "<group>"; };
 		C7E8A880DFA50C8ACA5807AE8443BF82 /* Pods-AQPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AQPlayer_Example.modulemap"; sourceTree = "<group>"; };
 		D15FC8366033D5C22BC3D98294A59311 /* AQPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AQPlayer-dummy.m"; sourceTree = "<group>"; };
 		DE944CC9A70A5213D878ED724331E2F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E71B5EBB4C147305EDA15B55517A96AE /* AQPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AQPlayer.xcconfig; sourceTree = "<group>"; };
 		F0D55EFC2909C6CAE4F3D877587EA268 /* AQPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AQPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1119E93224792A700E2FAD6 /* AAQueuePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAQueuePlayer.swift; path = AQPlayer/Classes/AAQueuePlayer.swift; sourceTree = "<group>"; };
-		F1119E94224792A700E2FAD6 /* AAPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerDelegate.swift; path = AQPlayer/Classes/AAPlayerDelegate.swift; sourceTree = "<group>"; };
-		F1119E95224792A700E2FAD6 /* AAPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerItem.swift; path = AQPlayer/Classes/AAPlayerItem.swift; sourceTree = "<group>"; };
-		F1119E96224792A700E2FAD6 /* AAPlayerItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerItemInfo.swift; path = AQPlayer/Classes/AAPlayerItemInfo.swift; sourceTree = "<group>"; };
-		F1119E97224792A700E2FAD6 /* AAPlayerStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerStatus.swift; path = AQPlayer/Classes/AAPlayerStatus.swift; sourceTree = "<group>"; };
-		F1119E98224792A700E2FAD6 /* AAPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAPlayerManager.swift; path = AQPlayer/Classes/AAPlayerManager.swift; sourceTree = "<group>"; };
 		F56222DFC5F24C05842E7C90DEF99515 /* Pods-AQPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AQPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FAEE7DFBCA8F8E167813E39F3F5102EF /* Pods-AQPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AQPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FE2D0D09F3F79C2915CD43E2DC0E3633 /* Pods-AQPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AQPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,12 +209,13 @@
 		F56B665F4AB26E6ADCBD1559722AF870 /* AQPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				F1119E98224792A700E2FAD6 /* AAPlayerManager.swift */,
-				F1119E94224792A700E2FAD6 /* AAPlayerDelegate.swift */,
-				F1119E95224792A700E2FAD6 /* AAPlayerItem.swift */,
-				F1119E96224792A700E2FAD6 /* AAPlayerItemInfo.swift */,
-				F1119E97224792A700E2FAD6 /* AAPlayerStatus.swift */,
-				F1119E93224792A700E2FAD6 /* AAQueuePlayer.swift */,
+				C19C387E290AEC7C00B495B2 /* Defaults.swift */,
+				C19C3874290AE90200B495B2 /* AQPlayerDelegate.swift */,
+				C19C3872290AE90200B495B2 /* AQPlayerItem.swift */,
+				C19C3877290AE90200B495B2 /* AQPlayerItemInfo.swift */,
+				C19C3873290AE90200B495B2 /* AQPlayerManager.swift */,
+				C19C3876290AE90200B495B2 /* AQPlayerStatus.swift */,
+				C19C3875290AE90200B495B2 /* AQQueuePlayer.swift */,
 				49CCB461AD9E0ED1831628EFCB651321 /* Pod */,
 				9343F55C51D1CF7AC4BAEA2AB732079A /* Support Files */,
 			);
@@ -330,13 +333,19 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					9CC8A23138F716804F5816FC61F8C4B1 = {
+						LastSwiftMigration = 1400;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 8F40F35DC80C90975972AE65A6B1D612 /* Products */;
@@ -387,13 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1119E99224792A700E2FAD6 /* AAQueuePlayer.swift in Sources */,
+				C19C387D290AE90200B495B2 /* AQPlayerItemInfo.swift in Sources */,
+				C19C387F290AEC7C00B495B2 /* Defaults.swift in Sources */,
 				F6D99AED4A0BB5AB151DBDE17299DAFE /* AQPlayer-dummy.m in Sources */,
-				F1119E9E224792A700E2FAD6 /* AAPlayerManager.swift in Sources */,
-				F1119E9C224792A700E2FAD6 /* AAPlayerItemInfo.swift in Sources */,
-				F1119E9B224792A700E2FAD6 /* AAPlayerItem.swift in Sources */,
-				F1119E9A224792A700E2FAD6 /* AAPlayerDelegate.swift in Sources */,
-				F1119E9D224792A700E2FAD6 /* AAPlayerStatus.swift in Sources */,
+				C19C3879290AE90200B495B2 /* AQPlayerManager.swift in Sources */,
+				C19C387C290AE90200B495B2 /* AQPlayerStatus.swift in Sources */,
+				C19C3878290AE90200B495B2 /* AQPlayerItem.swift in Sources */,
+				C19C387B290AE90200B495B2 /* AQQueuePlayer.swift in Sources */,
+				C19C387A290AE90200B495B2 /* AQPlayerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E71B5EBB4C147305EDA15B55517A96AE /* AQPlayer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -543,7 +554,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -623,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E71B5EBB4C147305EDA15B55517A96AE /* AQPlayer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -645,7 +657,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

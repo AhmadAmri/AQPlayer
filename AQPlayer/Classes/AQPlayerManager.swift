@@ -18,9 +18,10 @@ public final class AQPlayerManager: NSObject {
     fileprivate let commandCenter = MPRemoteCommandCenter.shared()
     fileprivate var qPlayer: AQQueuePlayer?
     fileprivate var qPlayerItems: [AQPlayerItem] = []
-    fileprivate var timer: Timer?
-    fileprivate var isSessionSetup = false
-    
+    fileprivate var qPlayerObserverRef: Any?
+    fileprivate var isSessionSetup = false    
+    fileprivate var isSeeking = false
+
     public var playerStatus: AQPlayerStatus {
         return self.status
     }
@@ -72,6 +73,9 @@ public final class AQPlayerManager: NSObject {
     public func clean() {
         qPlayer?.pause()
         qPlayer?.removeAllItems()
+        if let qPlayerObserverRef = qPlayerObserverRef {
+            qPlayer?.removeTimeObserver(qPlayerObserverRef)
+        }
         qPlayer = nil
         qPlayerItems.removeAll()
     }
@@ -108,6 +112,11 @@ public final class AQPlayerManager: NSObject {
         
         // init the AQQueuePlayer
         qPlayer = AQQueuePlayer(items: Array(qPlayerItems.dropFirst(toDrop)))
+        qPlayerObserverRef = qPlayer?.addProgressObserver(action: { (progress) in
+            DispatchQueue.main.async {
+                self.updateProgress(progress: progress)
+            }
+        })
         
         let keysToObserve = ["currentItem","rate"]
         for key in keysToObserve {
@@ -120,15 +129,11 @@ public final class AQPlayerManager: NSObject {
     }
     
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        debugPrint(String(describing: keyPath))        
+        debugPrint(String(describing: keyPath))
        
         
         guard let item = self.qPlayer?.currentItem as? AQPlayerItem else {
             self.status = .none
-            if self.timer != nil {
-                self.timer?.invalidate()
-                self.timer = nil
-            }
             return
         }
        
@@ -137,8 +142,7 @@ public final class AQPlayerManager: NSObject {
             self.status = .loading
             qPlayer?.currentItem?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
                 self.updateNowPlaying()
-                self.delegate?.aQPlayerManager(self, itemDidChange: item.index)
-                self.updateProgress()
+                self.delegate?.aQPlayerManager(self, itemDidChange: item.index)                
             break
             
         case "status":
@@ -153,6 +157,8 @@ public final class AQPlayerManager: NSObject {
                         self.status = .readyToPlay
                     }
                 case .failed:
+                    self.status = .failed
+                @unknown default:
                     self.status = .failed
                 }
             }
@@ -195,21 +201,16 @@ public final class AQPlayerManager: NSObject {
         }
     }
 
-    @objc fileprivate func updateProgress() {
-        guard let delegate = self.delegate else {
-            return
-        }
-        
-        guard let duration = qPlayer?.currentItem?.asset.duration else {
+    @objc fileprivate func updateProgress(progress: Double) {
+        guard let delegate = self.delegate, !progress.isNaN, isSeeking == false else {
             return
         }
         
         if self.status != .playing, qPlayer?.status == .readyToPlay, qPlayer?.rate ?? 0 > 0 {
             self.status = .playing
         }
-        let currentTime = self.qPlayer?.currentTime() ?? .zero
-        let percentage = currentTime.seconds / duration.seconds
-        delegate.aQPlayerManager(self, progressDidUpdate: percentage)
+        
+        delegate.aQPlayerManager(self, progressDidUpdate: progress)
         
     }
     
@@ -287,14 +288,8 @@ extension AQPlayerManager {
         
         self.qPlayer?.playImmediately(atRate: self.rate)
         //self.status = .playing
-        self.updateProgress()
+        self.updateProgress(progress: 0)
         self.updateNowPlaying()
-        
-        //update progress periodically
-        if self.timer == nil {
-            self.timer = Timer(timeInterval: Defaults.progressTimerInterval, target: self, selector: #selector(self.updateProgress), userInfo: nil, repeats: true)
-            RunLoop.main.add(self.timer!, forMode: .common)
-        }
         
     }
     
@@ -305,9 +300,6 @@ extension AQPlayerManager {
         
         qPlayer?.pause()
         self.status = .paused
-        timer?.invalidate()
-        timer = nil
-        updateProgress()
     }
     
     public func seek(toPercent: Double) {
@@ -318,6 +310,7 @@ extension AQPlayerManager {
     }
     
     public func seek(toTime: TimeInterval) {
+        self.isSeeking = true
         var playAfterSeek = false
         if self.status == .playing {
             self.pause()
@@ -329,6 +322,7 @@ extension AQPlayerManager {
             if playAfterSeek {
                 self.play()
             }
+            self.isSeeking = false
         })
     }
     
@@ -368,7 +362,7 @@ extension AQPlayerManager {
     }
     
     public func skipForward() {
-        self.pause()
+        
         let currentTime = self.qPlayer?.currentTime() ?? .zero
         var jumpToSec = currentTime + CMTime(seconds: self.skipIntervalInSeconds, preferredTimescale: Defaults.preferredTimescale) // dalta
         let duration = qPlayer?.currentItem?.duration ?? .zero
@@ -381,9 +375,7 @@ extension AQPlayerManager {
             return
         }
         
-        self.qPlayer?.seek(to: jumpToSec, completionHandler: { (value) in
-            self.play()
-        })
+        self.seek(toTime: jumpToSec.seconds)   
     }
     
     public func skipBackward() {
@@ -483,14 +475,14 @@ extension AQPlayerManager {
         // seek fwd , seek bwd
         commandCenter.seekForwardCommand.addTarget(handler: {[weak self] (_) -> MPRemoteCommandHandlerStatus in
             debugPrint("seekForwardCommand")
-            guard let strongSelf = self else {return .commandFailed}
+            guard self != nil else {return .commandFailed}
             
             debugPrint("Seek forward ")
             return .commandFailed
         })
         commandCenter.seekBackwardCommand.addTarget(handler: {[weak self] (_) -> MPRemoteCommandHandlerStatus in
             debugPrint("seekBackwardCommand")
-            guard let strongSelf = self else {return .commandFailed}
+            guard self != nil else {return .commandFailed}
             
             debugPrint("Seek backward ")
             return .commandFailed
@@ -515,7 +507,7 @@ extension AQPlayerManager {
         // playback rate
         commandCenter.changePlaybackRateCommand.addTarget(handler: {[weak self] (_) -> MPRemoteCommandHandlerStatus in
             debugPrint("changePlaybackRateCommand")
-            guard let strongSelf = self else {return .commandFailed}
+            guard self != nil else {return .commandFailed}
             
             debugPrint("Change Rate ")
             return .commandFailed
@@ -558,13 +550,4 @@ extension AQPlayerManager {
 public enum AQRemoteControlMode {
     case skip
     case nextprev
-}
-
-// default config values
-final class Defaults {
-    static let progressTimerInterval: TimeInterval = 1.0
-    static let preferredTimescale: CMTimeScale = 1000
-    static let skipIntervalInSeconds: TimeInterval = 15.0
-    static let playbackRates: [Float] = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
-    static let commandCenterMode = AQRemoteControlMode.skip
 }
